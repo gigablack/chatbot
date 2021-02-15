@@ -1,0 +1,3 @@
+[build]
+publish = "dist/chatbot"
+command = "ng build --prod"

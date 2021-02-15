@@ -1,0 +1,14 @@
+<nb-layout>
+  <nb-layout-column>
+<nb-chat title="Doggie ChatBot" size="large" status="primary">
+  <nb-chat-message *ngFor="let msg of messages" 
+    [message]="msg.message"
+    [type]="msg.type"
+    [sender]="msg.sender"
+    [reply]="msg.reply"
+    [date]="msg.date"
+    [avatar]="msg.avatar"></nb-chat-message>
+  <nb-chat-form (send)="sendMessage($event)"></nb-chat-form>
+</nb-chat>
+  </nb-layout-column>
+</nb-layout>
